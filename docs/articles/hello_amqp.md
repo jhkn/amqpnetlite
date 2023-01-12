@@ -75,7 +75,7 @@ namespace Receiver
 
             Console.WriteLine("Receiver connected to broker.");
             Message message = receiver.Receive(-1);
-            Console.WriteLine("Received " + message.GetBody<string>());
+            Console.WriteLine("Received " + message.Body);
             receiver.Accept(message);
 
             receiver.Close();
